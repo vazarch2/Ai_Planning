@@ -38,7 +38,7 @@
 		:effect (and (at ?x ?to) (not (at ?x ?from)) )
 	)
 	
-	(:action U
+	(:action PU
 		:parameters (?x - guard ?from - position ?to - position ?toBox - position)
 		:precondition (and 
 			(at ?x ?from )
@@ -49,7 +49,7 @@
 		:effect (and (at ?x ?to ) (not (at ?x ?from ) ) (isBox ?toBox ) (not (isBox ?to ) ) )
 	)
 
-	(:action D
+	(:action PD
 		:parameters (?x - guard ?from - position ?to - position ?toBox - position)
 		:precondition (and 
 			(at ?x ?from )
@@ -60,7 +60,7 @@
 		:effect (and (at ?x ?to ) (not (at ?x ?from ) ) (isBox ?toBox ) (not (isBox ?to ) ) )
 	)
 	
-	(:action L
+	(:action PL
 		:parameters (?x - guard ?from - position ?to - position ?toBox - position)
 		:precondition (and 
 			(at ?x ?from )
@@ -71,7 +71,7 @@
 		:effect (and (at ?x ?to ) (not (at ?x ?from ) ) (isBox ?toBox ) (not (isBox ?to ) ) )
 	)
 
-	(:action R
+	(:action PR
 		:parameters (?x - guard ?from - position ?to - position ?toBox - position)
 		:precondition (and 
 			(at ?x ?from )

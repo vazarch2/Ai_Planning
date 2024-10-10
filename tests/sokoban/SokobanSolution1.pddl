@@ -7,7 +7,7 @@
 		  E0 E1 E2 E3 E4 E5 E6 E7
 		  F0 F1 F2 F3 F4 F5 F6 F7 - position
 		  agent - guard )
-        (:INIT (isWall A2) (isWall A3) (isWall A5) (isWall A6)
+        (:INIT (isWall A2) (isWall A3) (isWall A4)(isWall A5) (isWall A6)
 	(isWall B2) (isWall B6) (isWall B7)
 	(isWall C0) (isWall C1) (isWall C2) (isWall C4) (isWall C7)
 	(isWall D0) (isWall D7)
