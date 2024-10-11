@@ -64,7 +64,10 @@ public class JsonDecoder {
                 if (positions[i].charAt(j) == '#') {
                     first = true;
                 } if (first) {
-                    sb.append(" ").append((char)(j + 65)).append(i);
+                    sb.append(" ").append((char) (j + 65)).append(i);
+                    /*le ((char) (j+65)) permet de convertir un entier en char 
+                    (pas necessaire mais facilite le debugage)
+                    */
                 }
             }
         }
@@ -120,15 +123,15 @@ public class JsonDecoder {
                 if (positions[i].charAt(j) == '#') {
                     first = true;
                 }
-                if (first && positions[i].charAt(j) == ' ') {
-                    if ((i - 1 >= 0) && positions[i - 1].charAt(j) != '#')
-                        sb.append(" (bas ").append((char)(j + 65)).append(i).append(" ").append((char)(j + 65)).append(i - 1).append(")");
-                    if ((i + 1 < positions.length) && positions[i + 1].charAt(j) != '#')
-                        sb.append(" (haut ").append((char)(j + 65)).append(i).append(" ").append((char)(j + 65)).append(i + 1).append(")");
-                    if ((j - 1 >= 0) && positions[i].charAt(j - 1) != '#')
-                        sb.append(" (droite ").append((char)(j + 65)).append(i).append(" ").append((char) (j-1+65)).append(i).append(")");
-                    if ((j + 1 < positions[i].length()) && positions[i].charAt(j + 1) != '#')
+                if (first && positions[i].charAt(j) != '#') {
+                    if ((i + 1 < positions.length) && positions[i + 1].charAt(j) != '#'){
+                        sb.append(" (haut ").append((char) (j + 65)).append(i).append(" ").append((char) (j + 65)).append(i + 1).append(")");
+                        sb.append(" (bas ").append((char)(j + 65)).append(i + 1).append(" ").append((char)(j + 65)).append(i).append(")\n");
+                    }    
+                    if ((j + 1 < positions[i].length()) && positions[i].charAt(j + 1) != '#'){
                         sb.append(" (gauche ").append((char)(j + 65)).append(i).append(" ").append((char)(j+1+65)).append(i).append(")");
+                        sb.append(" (droite ").append((char)(j + 1 + 65)).append(i).append(" ").append((char) (j+65)).append(i).append(")\n");
+                    }
                 }
             }
         }

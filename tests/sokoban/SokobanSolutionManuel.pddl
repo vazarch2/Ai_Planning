@@ -41,9 +41,6 @@
 	(haut D5 D6)(bas D6 D5)
 	(haut B3 B4)(bas B4 B3)
 	(haut B4 B5)(bas B5 B4)
-	(haut B5 B6)(bas B6 B5)
-
 	)
-    
     (:goal (AND(isBox E2) (isBox D3) (isBox D5)))
 )
