@@ -10,6 +10,6 @@
 
     javac -d classes -cp jar/pddl4j-4.0.0.jar SimplePlanner.java
 
-# Pour l'uliliser
+# Pour l'utiliser
 
     java -cp classes:jar/pddl4j-4.0.0.jar SimplePlanner sokoban.pddl tests/sokoban/<nom_du_fichier.pddl
